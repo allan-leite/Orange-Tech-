@@ -1,0 +1,67 @@
+Requisição HTTP
+
+URL: https://pokeapi.co/api/v2/pokemon?type=grass&name=i
+    ${Endereço}/${path = caminho de identificação do recurso}
+
+Request Method: GET | POST | PUT | DELETE
+
+Request Headers
+    Configuração da nossa API 
+    accept-language: 
+        pt-BR;q=1
+        pt;q=0.9   "q=0.9" Esse 'q' representa a prioridade
+        en-US;q=0.8
+        en;q=0.7
+        gl;q=0.6
+        
+Response Headers
+    Configuração
+
+Request Body
+{
+    "name": "teste"
+}
+
+STATUS CODE : 200 OK
+
+Responde Headers
+
+Response Body
+
+STATUS CODE significa o que aconteceu com a nossa requisição
+200 - 299 = Sucesso
+300 - 300 = Redirect
+400 - 499 = Erro Cliente
+500 - 599 = Erro Interno Servidor
+
+https://pokeapi.co/api/v2/pokemon?offset=20&limit=20
+
+offset = 20
+limit = 20
+
+O que significa Response Headers e Request Headers?
+São áreas de dados em que a gente pode transmitir coisas pro servidor, e também receber coisas do 
+servidor.
+
+Os Headers normalmente são metadados da nossa requisição, ou seja, são coisas para descrever ou 
+complementar a nossa requisição.
+
+Reforçando: os Headers são uma espécie de 'configuração' da nossa requisição
+
+Quem faz a configuração de requisição é o cliente, nesse caso o cliente é o browser.
+
+A configuração da resposta quem diz é o servidor
+
+Aqui estamos falando pro servidor o que eu aceito como resposta.
+accept: 
+text/html
+application/xhtml+xml
+application/xml;q=0.9
+image/avif
+image/webp,image/apng
+*/*;q=0.8
+application/signed-exchange;v=b3;q=0.9
+
+Dependendo do método que se está sendo utilizado, se tem uma área de dados, que é o body.
+
+BODY: É o corpo da requisição, que é o dado que queremos trafegar na requisição(dependendo do tipo)
